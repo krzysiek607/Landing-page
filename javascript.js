@@ -20,7 +20,6 @@ window.onload = (() => {
     }
 });
 
-
 const menu = document.querySelector('.hamburger');
 
 menu.addEventListener('click', () => {
@@ -28,7 +27,6 @@ menu.addEventListener('click', () => {
 });
 
 let box = document.querySelector("#box");
-// setInterval(function () { console.log(box.getBoundingClientRect().top)}, 1000);
 
 box.firstElementChild.classList.remove("inner");
 box.firstElementChild.classList.add("inner2");

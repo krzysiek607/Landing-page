@@ -8,16 +8,65 @@ html {
 }
 
 nav {
+    width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 20;
+}
+
+.site-menu {
+    position: absolute;
+    height: 8vh;
+    width: 45vh;
+    font-size: 5rem;
+    left: 5%;
+    top: 0;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 25px;
+    padding-right: 12%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    z-index: 2;
+}
+
+i {
+    margin-top: 4%;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+site-menu--active {
+    display: inline;
+}
+
+.icon-facebook {
+    color: blue;
+}
+
+.icon-linkedin-squared {
+    color: navy;
+}
+
+.icon-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon-gmail {
+    color: red;
 }
 
 .hamburger {
-    margin: 0;
+    position: absolute;
+    right: 0;
+    margin-top: 2%;
     padding: 0;
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    z-index: 0;
 }
 
 .hamburger:focus > .hamburger__container {
@@ -39,8 +88,9 @@ nav {
 .hamburger__bars {
     position: absolute;
     width: 35px;
-    height: 2px;
+    height: 4px;
     background-color: #000;
+    border-radius: 20px;
     transition: transform 220ms ease-in-out;
 }
 
@@ -48,7 +98,8 @@ nav {
     display: block;
     position: absolute;
     width: 35px;
-    height: 2px;
+    height: 4px;
+    border-radius: 20px;
     background-color: #000;
     content: '';
 }
@@ -77,12 +128,13 @@ nav {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+    z-index: 0;
 }
 
 header {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, #BDEBFE 10%, #245285 80%);
+    background: linear-gradient(to right, #aaaaaa 10%, #dddddd 80%);
     overflow-x: hidden;
     font-family: 'Oswald', sans-serif;
     position: fixed;
@@ -92,12 +144,10 @@ header {
 }
 
 header img {
-    position: absolute;
-    width: 63%;
-    height: 60%;
-    bottom: 0;
-    left: -15%;
-    transition: 1s;
+    width: 150%;
+    height: 60vh;
+    margin-top: 10vh;
+    left: 10%;
 }
 
 header nav {
@@ -116,14 +166,16 @@ header hgroup {
 }
 
 header h1 {
+    position: absolute;
+    top: 17%;
     font-size: 4rem;
     text-align: left;
-    margin-left: 5%;
+    margin-left: 15%;
 }
 
-header h3 {
+header h2 {
     position: absolute;
-    bottom: 0;
+    top: 25%;
     font-size: 2rem;
     margin-left: 30%;
     text-align: right;
@@ -148,7 +200,7 @@ header h3 {
     border: 3px solid black;
     border-radius: 50%;
     position: absolute;
-    bottom: 1%;
+    bottom: 5%;
     left: 50%;
     font-size: 5rem;
     transform: translateX(-50%);
@@ -172,7 +224,7 @@ header h3 {
 }
 
 main {
-    background: linear-gradient(to right, #BDEBFE 10%, #245285 80%);
+    background: linear-gradient(to right, #aaaaaa 10%, #dddddd 80%);
     position: relative;
     height: 89vh;
     margin-top: 100vh;
@@ -255,19 +307,29 @@ section {
 
     header h1 {
         font-size: 4.5rem;
+        top: 20%;
+        right: 15%;
+
     }
 
-    header h3 {
+    header h2 {
         font-size: 3rem;
+        right: 5%;
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 10%;
     }
 }
 
 @media (min-width: 768px) {
     header img {
         height: 100%;
-        width: 55%;
+        width: 100%;
+        margin-top: 10%;
+    }
+    .site-menu {
+        font-size: 2rem;
+        width: 100%;
+        text-decoration: none;
     }
 
     header h1 {
